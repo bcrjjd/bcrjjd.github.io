@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -167,4 +168,24 @@
             window.location.href = $url;
         }
 
-        //同步发起
+        //同步发起请求
+        function http_get(url){
+            var xhr = new XMLHttpRequest;
+            xhr.open("GET", url, false);
+            xhr.send();
+            if(xhr.status == 200){
+                var data = xhr.responseText;
+                return data;
+            }else{
+                return false;
+            }
+            var data = xhr.responseText;
+            return data;
+        }
+
+       
+
+    </script>
+</body>
+
+</html>
